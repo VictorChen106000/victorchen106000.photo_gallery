@@ -272,25 +272,25 @@ p,
 }
 
 #img1 {
-  background-image: url(PractisedProjects/Images/butterfly.jpg);
+  background-image: url(/PractisedProjects/Images/butterfly.jpg);
 }
 #img2 {
-  background-image: url(PractisedProjects/Images/underground.jpg);
+  background-image: url(/PractisedProjects/Images/underground.jpg);
 }
 #img7 {
-  background-image: url(PractisedProjects/Images/building.jpg);
+  background-image: url(/PractisedProjects/Images/building.jpg);
 }
 #img8 {
-  background-image: url(PractisedProjects/Images/room.jpg);
+  background-image: url(/PractisedProjects/Images/room.jpg);
 }
 #img9 {
-  background-image: url(PractisedProjects/Images/leaves.jpg);
+  background-image: url(/PractisedProjects/Images/leaves.jpg);
 }
 #img10 {
-  background-image: url(PractisedProjects/Images/train2.jpg);
+  background-image: url(/PractisedProjects/Images/train2.jpg);
 }
 #img11 {
-  background-image: url(PractisedProjects/Images/ship.jpg);
+  background-image: url(/PractisedProjects/Images/ship.jpg);
 }
 
 /* These four below are option you can romove the comment if you it will make a background behind the four images in base div */
