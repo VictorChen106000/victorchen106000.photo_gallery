@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery Website</title>
+
+    <!-- Links to the css for the Login form and the main html -->
+    <link rel="stylesheet" href="ParallaxGroupStyle.css" />
+    <link rel="stylesheet" href="PgroupLoginStyle.css" />
+
+    <!-- To be able to use the cute icon like home, facebook and instagram ,etc, we use the script below -->
+    <!-- Note: that's my own embed code got from the fontawesome website which is the website which provides coder with their beautiful icons. -->
+    <!-- If you want one you can also make yourself one  -->
+    <script
+      src="https://kit.fontawesome.com/ad34090705.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="sidenav" id="navbar">
+      <a href="#img10">Image 1</a>
+      <a href="#img1">Image 2</a>
+      <a href="#img2">Image 3</a>
+      <a href="#img11">Image 4</a>
+    </div>
+
+    <div class="nav" id="nav">
+      <nav>
+        <ul>
+          <li class="menu-icon" onclick="myFunction(this)">
+            <div class="bar1 bars"></div>
+            <div class="bar2 bars"></div>
+            <div class="bar3 bars"></div>
+          </li>
+
+          <li title="Home">
+            <a class="navlink" href="#img10"><i class="fas fa-home"></i></a>
+          </li>
+
+          <li><i class="fas fa-search"></i></li>
+
+          <li title="Contact">
+            <a href="#contact" class="navlink"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </li>
+
+          <li
+            title="Login"
+            onclick="document.getElementById('id01').style.display='block'"
+          >
+            <i class="fas fa-sign-in-alt"></i>
+          </li>
+
+          <li><i class="fas fa-trash"></i></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="parallax">
+      <div id="gp1" class="pgroup">
+        <div class="pLayer fore" id="img10">
+          <div class="title"></div>
+        </div>
+        <div class="pLayer base" id="img3">
+          <div class="title">Base Layer</div>
+        </div>
+      </div>
+
+      <div id="gp2" class="pgroup">
+        <div class="pLayer base trans">
+          <div class="title">Base Layer</div>
+        </div>
+        <div class="pLayer back" id="img7">
+          <div class="title">Background Layer</div>
+        </div>
+      </div>
+
+      <div id="gp3" class="pgroup">
+        <div class="pLayer fore" id="img1">
+          <div class="title"></div>
+        </div>
+        <div class="pLayer base" id="img4">
+          <div class="title">Base Layer</div>
+        </div>
+      </div>
+
+      <div id="gp4" class="pgroup">
+        <div class="pLayer base trans">
+          <div class="title">Base Layer</div>
+        </div>
+        <div class="pLayer back trans">
+          <div class="title">Background Layer</div>
+        </div>
+        <div class="pLayer deep" id="img9">
+          <div class="title">Deep Background Layer</div>
+        </div>
+      </div>
+
+      <div id="gp5" class="pgroup">
+        <div class="pLayer fore" id="img2">
+          <div class="title"></div>
+        </div>
+        <div class="pLayer base" id="img5">
+          <div class="title">Base Layer</div>
+        </div>
+      </div>
+
+      <div id="gp6" class="pgroup">
+        <div class="pLayer base trans">
+          <div class="title">Base Layer</div>
+        </div>
+        <div class="pLayer back" id="img8">
+          <div class="title">Background Layer</div>
+        </div>
+      </div>
+
+      <div id="gp7" class="pgroup">
+        <div class="pLayer fore" id="img11">
+          <div class="title"></div>
+        </div>
+        <div class="pLayer base" id="img6">
+          <div class="title">Base Layer</div>
+        </div>
+      </div>
+
+      <div class="modal" id="id01">
+        <form
+          class="modal-content animate"
+          action="/action_page.php"
+          method="POST"
+        >
+          <div class="imgcontainer">
+            <span
+              class="close"
+              onclick="document.getElementById('id01').style.display='none'"
+              title="Close Modal"
+            >
+              &times;
+            </span>
+
+            <img src="PractisedProjects/Images/catridge.jpg" alt="Catridge" class="catridge" />
+          </div>
+
+          <div class="container">
+            <label for="username"><b>Username</b></label>
+            <input
+              type="text"
+              name="username"
+              placeholder="Enter Username"
+              required
+            />
+
+            <label for="psw"><b>Password</b></label>
+            <input
+              type="password"
+              name="psw"
+              placeholder="Enter Password"
+              required
+            />
+
+            <button id="login" type="submit">Login</button>
+            <label>
+              <input
+                type="checkbox"
+                checked="checked"
+                name="remember"
+                id="check"
+              />Remember me
+            </label>
+          </div>
+
+          <div class="container" style="background-color: inherit">
+            <button
+              type="button"
+              class="cancelbtn"
+              onclick="document.getElementById('id01').style.display='none'"
+            >
+              Cancel
+            </button>
+
+            <span class="psw"
+              >Forget <a href="#" id="forget">password?</a>
+            </span>
+          </div>
+        </form>
+      </div>
+
+      <footer id="contact">
+        <a href="#" class="social-icons"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icons"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icons"><i class="fab fa-pinterest-p"></i></a>
+        <a href="#" class="social-icons"><i class="fab fa-twitter"></i></a>
+        <p>Powered by Victor</p>
+      </footer>
+    </div>
+
+    <script>
+      function myFunction(x) {
+        x.classList.toggle("change");
+        var y = document.getElementById("navbar");
+        if (y.style.display == "block") {
+          y.style.display = "none";
+        } else {
+          y.style.display = "block";
+        }
+
+        //Get the modal
+        var modal = document.getElementById("id01");
+
+        //when the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+      }
+    </script>
+  </body>
+</html>
