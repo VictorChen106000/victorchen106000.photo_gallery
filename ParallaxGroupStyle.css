@@ -1,0 +1,304 @@
+body,
+html {
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font: 100% / 1.5 Arial;
+  /* background-color: #485461; */
+  /* background-image: linear-gradient(315deg, #485461 0%, #28313b 74%); */
+  /* background-color: #000000; */
+  /* background-image: linear-gradient(315deg, #9b4d4d 0%, #414141 74%); */
+  background-image: linear-gradient(to top, #304352, #d7d2cc);
+}
+
+/* For all content in that html */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+/* In editor mode the first two div in the body are for the navbar and the side navbar */
+/* Side navbar is the one which comes out on the left side of the screen when you click the menu-icon */
+
+/* The main of that website which begins below the navigation bar on top */
+.parallax {
+  /* height: 500px; */
+  font-size: 200%;
+  height: 90vh;
+  margin-top: 55px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 150px;
+}
+
+.pgroup {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.pLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.fore {
+  transform: translateZ(0) scale(0.7);
+  z-index: 1;
+}
+
+.base {
+  transform: translateZ(-90px) scale(1.2);
+  z-index: 4;
+}
+
+.back {
+  transform: translateZ(-300px) scale(2);
+  z-index: 3;
+}
+
+.deep {
+  transform: translateZ(-600px) scale(3);
+  z-index: 2;
+}
+
+.fore,
+.base,
+.back,
+.deep {
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-size: cover;
+  background-position: center;
+}
+
+/* The base layer div with transparent background  */
+.trans {
+  background: transparent;
+}
+
+/* Center the contents which are the text like background layer in the parallax layers */
+.title {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Style of the main navigation bar on top of the screen */
+.nav {
+  position: fixed;
+  width: 100%;
+  background-color: #555;
+  overflow: hidden;
+  z-index: 80;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  float: left;
+  width: 13%;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  padding: 5px 0px;
+  transition: all 0.5s ease;
+}
+
+li:hover {
+  background-color: black;
+}
+.navlink {
+  color: white;
+}
+.navlink:hover {
+  color: gray;
+}
+.fa-sign-in-alt:hover {
+  color: gray;
+}
+
+/* The menu-icon is the one with three bar in the main navigation bar when you click it turns out into a cross */
+.menu-icon {
+  text-align: center;
+  background-color: gray;
+  cursor: pointer;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 20px;
+  height: 5px;
+  background-color: white;
+  margin: 8px 0;
+  transition: 0.4s;
+  margin-left: 60px;
+  padding-left: 35px;
+}
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 10px);
+}
+.change .bar2 {
+  transform: translate(15px);
+  opacity: 0;
+}
+.change .bar3 {
+  transform: rotate(45deg) translate(-9px, -10px);
+}
+
+/* Style of side navigation bar  */
+.sidenav {
+  position: absolute;
+  top: 70px;
+  display: none;
+}
+.sidenav a {
+  margin-top: 10px;
+  width: 120px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-size: 25px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: relative;
+  padding-left: 10px;
+  background-color: rgba(0, 128, 128, 0.5);
+  border-radius: 0px 10px 10px 0;
+  z-index: 99;
+  cursor: pointer;
+  left: -100px;
+  transition: 0.5s;
+}
+.sidenav a:hover {
+  border-radius: 0px 10px 10px 0;
+  background-color: teal;
+  left: 0;
+}
+/* .sidenav a {
+        position: relative;
+        left: 165px;
+        display: block;
+        width: 135px;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        z-index: 99;
+        border-radius: 30px;
+        font-size: 30px;
+        background-color: rgba(0, 128, 128, 0.5);
+        margin-top: 10px;
+        padding: 5px;
+      }
+      .sidenav {
+        position: absolute;
+        display: none;
+        transition: 0.5s;
+      }
+      .sidenav a:hover {
+        background-color: teal;
+      } */
+
+/* Style for the footer at the bottom of the screen */
+footer {
+  top: 50px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  background-color: rgb(58, 58, 58);
+}
+p {
+  font-family: "Comic Sans MS", "Georgia";
+  font-size: 20px;
+  right: 10px;
+}
+.social-icons {
+  letter-spacing: 25px;
+}
+p,
+.social-icons {
+  color: black;
+  position: relative;
+  top: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .nav,
+  .parallax {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .bars {
+    position: relative;
+    right: 43px;
+    width: 20%;
+  }
+}
+
+/* Placing the photo like whick photo is above which and which lays deeper into the screen e.g. deep background layer */
+#gp1 {
+  z-index: 5;
+}
+#gp2 {
+  z-index: 3;
+}
+#gp3 {
+  z-index: 4;
+}
+#gp4 {
+  z-index: 2;
+}
+#gp5 {
+  z-index: 3;
+}
+#gp6 {
+  z-index: 2;
+}
+#gp7 {
+  z-index: 3;
+}
+
+#img1 {
+  background-image: url(PractisedProjects/Images/butterfly.jpg);
+}
+#img2 {
+  background-image: url(PractisedProjects/Images/underground.jpg);
+}
+#img7 {
+  background-image: url(PractisedProjects/Images/building.jpg);
+}
+#img8 {
+  background-image: url(PractisedProjects/Images/room.jpg);
+}
+#img9 {
+  background-image: url(PractisedProjects/Images/leaves.jpg);
+}
+#img10 {
+  background-image: url(PractisedProjects/Images/train2.jpg);
+}
+#img11 {
+  background-image: url(PractisedProjects/Images/ship.jpg);
+}
+
+/* These four below are option you can romove the comment if you it will make a background behind the four images in base div */
+#img3,
+#img4,
+#img5,
+#img6 {
+  /* background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%); */
+  /* background-image: url(../PractisedProjects/Images/butterfly.jpg */
+}
