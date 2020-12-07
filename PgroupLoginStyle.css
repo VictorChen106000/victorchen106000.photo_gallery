@@ -1,0 +1,170 @@
+/* Input fields username and password styles */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 30px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input:focus {
+  box-shadow: 0px 0px 10px 1px whitesmoke;
+  outline: none;
+}
+
+/* Login button style */
+#login {
+  background-color: #4caf50;
+  opacity: 0.8;
+  font-size: 20px;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 30px;
+}
+/* Login button hover effect when pointer lay on it */
+#login:hover {
+  opacity: 1;
+  box-shadow: 0px 0px 10px 1px #4caf50;
+}
+
+/* Cancel button style */
+.cancelbtn {
+  width: auto;
+  font-size: 20px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  color: whitesmoke;
+  background-color: #f44336;
+  opacity: 0.8;
+}
+
+/* Cancel button hover effect when pointer lay on it */
+.cancelbtn:hover {
+  opacity: 1;
+  box-shadow: 0px 0px 10px 1px #f44336;
+}
+
+/* Removing the black border which comes out when click the Login button and Cancel button */
+#login,
+.cancelbtn:focus {
+  outline: none;
+}
+
+/* Style for the Checkbox beside "Remember me" */
+#check {
+  margin-right: 10px;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+img.catridge {
+  width: 75%;
+  border-radius: 50%;
+}
+
+/* The container which contains Cancel button and the sentence "Forget password" */
+.container {
+  padding: 16px;
+  border-radius: 20px;
+}
+
+/* Style for the word "password" in "Forget password" */
+span.psw {
+  float: right;
+  padding-top: 16px;
+  font-weight: bold;
+}
+#forget {
+  color: rgb(138, 53, 199);
+}
+#forget:hover {
+  text-shadow: 0px 0px 10px rgb(138, 53, 199);
+}
+
+/* The Modal(background)  which is the main div for the modal-content below*/
+.modal {
+  /* display: none; */
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  font-family: "Brush Script MT";
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  color: rgb(155, 155, 155);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#id01 {
+  display: none;
+}
+
+/* Modal content/box is the div where the Login form actually exists*/
+.modal-content {
+  background-color: inherit;
+  margin: 5% auto 15% auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 1px whitesmoke;
+  border: 1px solid #888;
+  width: 450px;
+}
+
+/* The close button (X) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add zoom animation when the login form comes out*/
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Change styles for span and cancel btn on extra small screen */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
